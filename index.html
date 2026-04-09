@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinchan Homepage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <header>
+        <section class="top-banner">
+            <img src="assets\assets\shin-chan-banner.jpg" alt="Shinchan banner">
+        </section>
+
+        <nav class="main-nav">
+            <a href="#home">Home</a>
+            <a href="#characters">Characters</a>
+            <a href="#favorite">Favorite</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+
+        <section id="home" class="section-box">
+            <div class="title-area">
+                <img src="assets\assets\shinchan.gif" alt="Shinchan dancing" class="title-gif">
+
+                <div class="title-text">
+                    <h1>Shinchan: Shiro and the Coal Town</h1>
+                    <h2>A soft and peaceful everyday story</h2>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets\assets\shinchan-coal-town-poster.jpg" alt="Shinchan Shiro and the Coal Town poster">
+            </div>
+        </section>
+
+        <section class="section-box">
+            <h2 class="section-title">Official Trailer</h2>
+
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="assets\assets\shinchan-and-the-coal-town.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="section-box">
+            <div class="scene-image">
+                <img src="assets\assets\gatherongrass.png" alt="Shinchan and friends">
+            </div>
+        </section>
+
+        <section class="section-box intro-section">
+            <div class="intro-image">
+                <img src="assets\assets\遛狗.png" alt="Shinchan and Shiro walking">
+            </div>
+
+            <div class="intro-text">
+                <h2>Story Introduction</h2>
+                <p>
+                    Shinchan is a lively and funny little boy who turns ordinary days into memorable moments.
+                    Together with his family, his dog Shiro, and his close friends, he experiences a world full
+                    of warmth, curiosity, and small everyday adventures.
+                </p>
+                <p>
+                    This homepage presents the gentle atmosphere of Shinchan’s world through soft colors,
+                    peaceful images, and a simple responsive layout.
+                </p>
+            </div>
+        </section>
+
+        <section id="characters" class="section-box">
+            <h2 class="section-title">Characters</h2>
+
+            <div class="characters-list">
+
+                <article class="character-card">
+                    <img src="assets\assets\shinchan.png" alt="Shinchan">
+                    <h3>Shinchan</h3>
+                    <p>
+                        A playful and naughty boy who always makes daily life more interesting.
+                    </p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets\assets\shiro.png" alt="Shiro">
+                    <h3>Shiro</h3>
+                    <p>
+                        Shinchan’s lovely white dog, gentle, cute, and full of charm.
+                    </p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets\assets\dad.png" alt="Hiroshi">
+                    <h3>Hiroshi</h3>
+                    <p>
+                        Shinchan’s father, kind and humorous, who deeply cares about his family.
+                    </p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets\assets\mom.png" alt="Misae">
+                    <h3>Misae</h3>
+                    <p>
+                        Shinchan’s mother, energetic and strict at times, but always loving.
+                    </p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets\assets\kazama.png" alt="Kazama">
+                    <h3>Kazama</h3>
+                    <p>
+                        One of Shinchan’s close friends, smart, neat, and a little serious.
+                    </p>
+                </article>
+
+                <article class="character-card">
+                    <img src="assets\assets\sister.png" alt="Himawari">
+                    <h3>Himawari</h3>
+                    <p>
+                        Himawari is Shinchan’s little sister. She is cute, cheerful, and full of energy. She loves shiny things。
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="favorite" class="section-box">
+            <h2 class="section-title">Favorite Character</h2>
+
+            <form class="favorite-form">
+                <div class="form-group">
+                    <label for="favoriteCharacter">Who is your favorite character?</label>
+                    <select id="favoriteCharacter" name="favorite_character">
+                        <option value="">-- Select one --</option>
+                        <option value="Shinchan">Shinchan</option>
+                        <option value="Shiro">Shiro</option>
+                        <option value="Hiroshi">Hiroshi</option>
+                        <option value="Misae">Misae</option>
+                        <option value="Kazama">Kazama</option>
+                        <option value="Himawari">Himawari</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Why do you like this character?</label>
+                    <textarea id="reason" name="reason" rows="4" placeholder="Write your answer here..."></textarea>
+                </div>
+
+                <div class="form-group submit-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>&copy; 2026 GenshinMaster Shinchan Homepage</p>
+        <p>&copy; 2026 Programm 4</p>
+    </footer>
+
+    
+
+</body>
+</html>
