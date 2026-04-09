@@ -130,7 +130,7 @@ footer {
 
 .hero-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 }
 
@@ -159,6 +159,9 @@ footer {
 
 .intro-image {
     width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .intro-image img {
@@ -169,6 +172,9 @@ footer {
 
 .intro-text {
     width: 58%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .intro-text h2 {
