@@ -7,42 +7,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(74, 82, 88);
     line-height: 1.6;
-    position: relative;
-    z-index: 0;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("assets/assets/background.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -2;
-}
-
-
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(244, 248, 252, 0.68);
-    z-index: -1;
-}
-
-header,
-main,
-footer {
-    position: relative;
-    z-index: 1;
+    background-color: rgb(245, 248, 250);
 }
 
 .top-banner img {
@@ -57,7 +22,7 @@ footer {
     padding: 14px 10px;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10;
 }
 
 .main-nav a {
@@ -67,15 +32,22 @@ footer {
     font-weight: bold;
     margin: 4px 12px;
     padding: 6px 12px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .main-nav a:hover {
     background-color: rgba(66, 90, 108, 0.92);
+    transform: scale(1.03);
+}
+
+.main-nav a:active {
+    background-color: rgb(52, 72, 88);
+    transform: scale(0.97);
 }
 
 .page-container {
     width: 92%;
+    max-width: 1100px;
     margin: 20px auto;
 }
 
@@ -84,6 +56,13 @@ footer {
     border: 1px solid rgb(208, 216, 223);
     padding: 22px;
     margin-bottom: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform-origin: center;
+}
+
+.section-box:hover {
+    transform: scale(1.01);
+    background-color: rgba(252, 254, 255, 0.92);
 }
 
 .section-title {
@@ -108,6 +87,11 @@ footer {
     width: 120px;
     height: auto;
     display: block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.title-gif:hover {
+    transform: scale(1.05);
 }
 
 .title-text {
@@ -117,38 +101,53 @@ footer {
 .title-text h1 {
     margin: 0;
     color: rgb(80, 95, 106);
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .title-text h2 {
     margin-top: 10px;
     margin-bottom: 0;
     color: rgb(118, 129, 136);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: normal;
 }
 
-.hero-image img {
+.hero-image,
+.scene-image,
+.intro-image,
+.video-wrapper,
+.character-card {
+    overflow: hidden;
+}
+
+.hero-image img,
+.scene-image img,
+.intro-image img,
+.character-card img,
+.video-wrapper video {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image img:hover,
+.scene-image img:hover,
+.intro-image img:hover,
+.character-card img:hover,
+.video-wrapper video:hover {
+    transform: scale(1.05);
 }
 
 .video-wrapper {
     width: 88%;
     margin: 0 auto;
+    transition: transform 0.3s ease;
+    transform-origin: center;
 }
 
-.video-wrapper video {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.scene-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+.video-wrapper:hover {
+    transform: scale(1.02);
 }
 
 .intro-section {
@@ -164,17 +163,8 @@ footer {
     gap: 12px;
 }
 
-.intro-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 .intro-text {
     width: 58%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
 }
 
 .intro-text h2 {
@@ -195,13 +185,13 @@ footer {
     border: 1px solid rgb(210, 218, 224);
     padding: 15px;
     background-color: rgba(247, 250, 252, 0.86);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform-origin: center;
 }
 
-.character-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 12px;
+.character-card:hover {
+    transform: scale(1.02);
+    background-color: rgba(250, 253, 255, 0.96);
 }
 
 .character-card h3 {
@@ -238,6 +228,20 @@ footer {
     color: rgb(74, 82, 88);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
+    transition: border-color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.favorite-form select:hover,
+.favorite-form textarea:hover {
+    transform: scale(1.01);
+}
+
+.favorite-form select:focus,
+.favorite-form textarea:focus {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(138, 161, 150);
+    outline: none;
+    transform: scale(1.01);
 }
 
 .submit-group {
@@ -250,11 +254,17 @@ footer {
     color: rgb(248, 249, 246);
     border: 1px solid rgb(120, 142, 132);
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease-out, transform 0.3s ease;
 }
 
 .favorite-form input[type="submit"]:hover {
     background-color: rgb(120, 142, 132);
+    transform: scale(1.03);
+}
+
+.favorite-form input[type="submit"]:active {
+    background-color: rgb(98, 118, 109);
+    transform: scale(0.97);
 }
 
 .page-footer {
@@ -263,9 +273,15 @@ footer {
     border-top: 1px solid rgb(200, 208, 214);
     padding: 15px;
     color: rgb(88, 95, 100);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
+.page-footer:hover {
+    transform: scale(1.01);
+    background-color: rgba(232, 237, 241, 0.96);
+}
+
+@media (max-width: 700px) {
     .title-area {
         flex-direction: column;
     }
@@ -279,198 +295,15 @@ footer {
     }
 
     .intro-image,
-    .intro-text {
-        width: 100%;
-    }
-
-    .character-card {
+    .intro-text,
+    .character-card,
+    .video-wrapper,
+    .favorite-form {
         width: 100%;
     }
 
     .main-nav a {
         display: block;
         margin: 8px auto;
-    }
-
-    .video-wrapper,
-    .favorite-form {
-        width: 100%;
-    }
-}
-
-.page-container {
-    max-width: 1100px;
-}
-
-.section-title::before {
-    content: "★ ";
-}
-
-.section-title::after {
-    content: " ★";
-}
-
-.section-box,
-.character-card,
-.main-nav a,
-.favorite-form input[type="submit"],
-.favorite-form select,
-.favorite-form textarea,
-.hero-image img,
-.scene-image img,
-.intro-image img,
-.character-card img {
-    transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-color 0.3s ease,
-                transform 0.3s ease;
-}
-
-.hero-image,
-.scene-image,
-.intro-image,
-.character-card {
-    overflow: hidden;
-}
-
-.section-box:hover {
-    background-color: rgba(255, 255, 255, 0.92);
-    transform: translateY(-4px);
-}
-
-.main-nav a:hover,
-.main-nav a:focus {
-    background-color: rgba(66, 90, 108, 0.92);
-}
-
-.main-nav a:active {
-    transform: scale(0.96);
-}
-
-.hero-image img:hover,
-.scene-image img:hover,
-.intro-image img:hover,
-.character-card img:hover {
-    transform: scale(1.04);
-}
-
-.character-card:hover {
-    background-color: rgba(255, 255, 255, 0.96);
-    transform: translateY(-6px);
-}
-
-.favorite-form select:focus,
-.favorite-form textarea:focus {
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(138, 161, 150);
-}
-
-.favorite-form input[type="submit"]:hover,
-.favorite-form input[type="submit"]:focus {
-    background-color: rgb(120, 142, 132);
-}
-
-.favorite-form input[type="submit"]:active {
-    transform: scale(0.97);
-}
-
-@media (max-width: 992px) {
-    .character-card {
-        width: 45%;
-    }
-
-    .title-text h1 {
-        font-size: 1.9rem;
-    }
-
-    .title-text h2 {
-        font-size: 1.05rem;
-    }
-
-    .video-wrapper,
-    .favorite-form {
-        width: 94%;
-    }
-}
-
-@media (max-width: 768px) {
-    .page-container {
-        width: 95%;
-    }
-
-    .section-box {
-        padding: 18px;
-    }
-
-    .title-area {
-        flex-direction: column;
-    }
-
-    .title-text {
-        text-align: center;
-    }
-
-    .intro-section {
-        flex-direction: column;
-    }
-
-    .intro-image,
-    .intro-text {
-        width: 100%;
-    }
-
-    .character-card {
-        width: 100%;
-    }
-
-    .main-nav a {
-        display: block;
-        width: 80%;
-        margin: 8px auto;
-    }
-
-    .title-gif {
-        width: 95px;
-    }
-
-    .title-text h1 {
-        font-size: 1.6rem;
-    }
-
-    .title-text h2 {
-        font-size: 1rem;
-    }
-
-    .video-wrapper,
-    .favorite-form {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-box {
-        padding: 14px;
-    }
-
-    .main-nav {
-        padding: 10px 8px;
-    }
-
-    .title-gif {
-        width: 80px;
-    }
-
-    .title-text h1 {
-        font-size: 1.35rem;
-    }
-
-    .title-text h2 {
-        font-size: 0.92rem;
-    }
-
-    .favorite-form select,
-    .favorite-form textarea,
-    .favorite-form input[type="submit"] {
-        font-size: 0.95rem;
     }
 }
