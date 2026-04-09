@@ -291,3 +291,180 @@ footer {
         width: 100%;
     }
 }
+
+.page-container {
+    max-width: 1100px;
+}
+
+.section-title::before {
+    content: "★ ";
+}
+
+.section-title::after {
+    content: " ★";
+}
+
+.section-box,
+.character-card,
+.main-nav a,
+.favorite-form input[type="submit"],
+.favorite-form select,
+.favorite-form textarea,
+.hero-image img,
+.scene-image img,
+.intro-image img,
+.character-card img {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.hero-image,
+.scene-image,
+.intro-image,
+.character-card {
+    overflow: hidden;
+}
+
+.section-box:hover {
+    background-color: rgba(255, 255, 255, 0.92);
+    transform: translateY(-4px);
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: rgba(66, 90, 108, 0.92);
+}
+
+.main-nav a:active {
+    transform: scale(0.96);
+}
+
+.hero-image img:hover,
+.scene-image img:hover,
+.intro-image img:hover,
+.character-card img:hover {
+    transform: scale(1.04);
+}
+
+.character-card:hover {
+    background-color: rgba(255, 255, 255, 0.96);
+    transform: translateY(-6px);
+}
+
+.favorite-form select:focus,
+.favorite-form textarea:focus {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(138, 161, 150);
+}
+
+.favorite-form input[type="submit"]:hover,
+.favorite-form input[type="submit"]:focus {
+    background-color: rgb(120, 142, 132);
+}
+
+.favorite-form input[type="submit"]:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 992px) {
+    .character-card {
+        width: 45%;
+    }
+
+    .title-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .title-text h2 {
+        font-size: 1.05rem;
+    }
+
+    .video-wrapper,
+    .favorite-form {
+        width: 94%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        width: 95%;
+    }
+
+    .section-box {
+        padding: 18px;
+    }
+
+    .title-area {
+        flex-direction: column;
+    }
+
+    .title-text {
+        text-align: center;
+    }
+
+    .intro-section {
+        flex-direction: column;
+    }
+
+    .intro-image,
+    .intro-text {
+        width: 100%;
+    }
+
+    .character-card {
+        width: 100%;
+    }
+
+    .main-nav a {
+        display: block;
+        width: 80%;
+        margin: 8px auto;
+    }
+
+    .title-gif {
+        width: 95px;
+    }
+
+    .title-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .title-text h2 {
+        font-size: 1rem;
+    }
+
+    .video-wrapper,
+    .favorite-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-box {
+        padding: 14px;
+    }
+
+    .main-nav {
+        padding: 10px 8px;
+    }
+
+    .title-gif {
+        width: 80px;
+    }
+
+    .title-text h1 {
+        font-size: 1.35rem;
+    }
+
+    .title-text h2 {
+        font-size: 0.92rem;
+    }
+
+    .favorite-form select,
+    .favorite-form textarea,
+    .favorite-form input[type="submit"] {
+        font-size: 0.95rem;
+    }
+}
